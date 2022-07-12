@@ -14,7 +14,7 @@
         <description/>
         <ih_action>true</ih_action>
         <internal_name>send_rejection_message</internal_name>
-        <label_cache>[{"name":"{{action.leave_record}}","label":"action➛Leave Record","type":"action","ref":"","reference_display":"Work Leaves","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_type.description}}","label":"action➛Leave Record➛Leave Type➛Description","type":"action","ref":"","reference_display":"Description","base_type":"string","parent_table_name":"x_832172_integra_leave_types","column_name":"description","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_date}}","label":"action➛Leave Record➛Leave Date","type":"action","ref":"","reference_display":"Leave Date","base_type":"glide_date","parent_table_name":"x_832172_integra_work_leaves","column_name":"leave_date","choices":null,"attributes":{}},{"name":"{{action.leave_record.slack_user_id}}","label":"action➛Leave Record➛Slack User ID","type":"action","ref":"","reference_display":"Slack User ID","base_type":"string","parent_table_name":"x_832172_integra_work_leaves","column_name":"slack_user_id","choices":null,"attributes":{}},{"name":"{{step[2416b539-450d-4603-bd75-f19ff4cb3955].sn_auth_token}}","label":"step➛Post update to channel➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"password2","isLocal":"true"}}]</label_cache>
+        <label_cache>[{"name":"{{action.leave_record}}","label":"action➛Leave Record","type":"action","ref":"","reference_display":"Work Leaves","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_type.description}}","label":"action➛Leave Record➛Leave Type➛Description","type":"action","ref":"","reference_display":"Description","base_type":"string","parent_table_name":"x_832172_integra_leave_types","column_name":"description","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_date}}","label":"action➛Leave Record➛Leave Date","type":"action","ref":"","reference_display":"Leave Date","base_type":"glide_date","parent_table_name":"x_832172_integra_work_leaves","column_name":"leave_date","choices":null,"attributes":{}},{"name":"{{action.leave_record.slack_user_id}}","label":"action➛Leave Record➛Slack User ID","type":"action","ref":"","reference_display":"Slack User ID","base_type":"string","parent_table_name":"x_832172_integra_work_leaves","column_name":"slack_user_id","choices":null,"attributes":{}},{"name":"{{action.leave_record.rejection_comment}}","label":"action➛Leave Record➛Rejection Comment","type":"action","ref":"","reference_display":"Rejection Comment","base_type":"string","parent_table_name":"x_832172_integra_work_leaves","column_name":"rejection_comment","choices":null,"attributes":{}},{"name":"{{step[2416b539-450d-4603-bd75-f19ff4cb3955].sn_auth_token}}","label":"step➛Post update to channel➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"password2","isLocal":"true"}}]</label_cache>
         <master_snapshot>af00a6831b6411101f8ffcc8cc4bcb72</master_snapshot>
         <name>Send Rejection Message</name>
         <natlang/>
@@ -26,7 +26,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d17f52431b6411101f8ffcc8cc4bcba0</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Send Rejection Message</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slack Replica Spoke" source="x_832172_slack_rep">3862d6431b2411101f8ffcc8cc4bcbb4</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="Slack Replica Spoke">3862d6431b2411101f8ffcc8cc4bcbb4</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_d17f52431b6411101f8ffcc8cc4bcba0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:47:36</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:02:04</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -87,10 +87,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:46:31</sys_created_on>
         <sys_id>c50026831b6411101f8ffcc8cc4bcbce</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Slack Replica Spoke">3862d6431b2411101f8ffcc8cc4bcbb4</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:47:26</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:01:55</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c50026831b6411101f8ffcc8cc4bcbce"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -279,9 +279,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:46:31</sys_created_on>
         <sys_id>990066831b6411101f8ffcc8cc4bcb19</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:47:26</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:01:55</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value>{
    "blocks": [
@@ -303,7 +303,7 @@
              "type": "section",
              "text": {
                  "type": "mrkdwn",
-                 "text": "Reason: "
+                 "text": "*Reason*: {{action.leave_record.rejection_comment}}"
              }
         },
     ]
@@ -868,17 +868,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Send Rejection Message">d17f52431b6411101f8ffcc8cc4bcba0</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"dc10e6831b6411101f8ffcc8cc4bcb44","name":"plan","plan_signature":null}}</plan>
-        <snapshot>8140ea831b6411101f8ffcc8cc4bcbac</snapshot>
+        <snapshot>0993ae871b6411101f8ffcc8cc4bcb60</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:46:43</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>dc10e6831b6411101f8ffcc8cc4bcb44</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:47:38</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:02:06</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -892,7 +892,7 @@
         <copied_from_name/>
         <description/>
         <internal_name>send_rejection_message</internal_name>
-        <label_cache>[{"name":"{{action.leave_record}}","label":"action➛Leave Record","type":"action","ref":"","reference_display":"Work Leaves","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_type.description}}","label":"action➛Leave Record➛Leave Type➛Description","type":"action","ref":"","reference_display":"Description","base_type":"string","parent_table_name":"x_832172_integra_leave_types","column_name":"description","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_date}}","label":"action➛Leave Record➛Leave Date","type":"action","ref":"","reference_display":"Leave Date","base_type":"glide_date","parent_table_name":"x_832172_integra_work_leaves","column_name":"leave_date","choices":null,"attributes":{}},{"name":"{{action.leave_record.slack_user_id}}","label":"action➛Leave Record➛Slack User ID","type":"action","ref":"","reference_display":"Slack User ID","base_type":"string","parent_table_name":"x_832172_integra_work_leaves","column_name":"slack_user_id","choices":null,"attributes":{}},{"name":"{{step[2416b539-450d-4603-bd75-f19ff4cb3955].sn_auth_token}}","label":"step➛Post update to channel➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"password2","isLocal":"true"}}]</label_cache>
+        <label_cache>[{"name":"{{action.leave_record}}","label":"action➛Leave Record","type":"action","ref":"","reference_display":"Work Leaves","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_type.description}}","label":"action➛Leave Record➛Leave Type➛Description","type":"action","ref":"","reference_display":"Description","base_type":"string","parent_table_name":"x_832172_integra_leave_types","column_name":"description","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_date}}","label":"action➛Leave Record➛Leave Date","type":"action","ref":"","reference_display":"Leave Date","base_type":"glide_date","parent_table_name":"x_832172_integra_work_leaves","column_name":"leave_date","choices":null,"attributes":{}},{"name":"{{action.leave_record.slack_user_id}}","label":"action➛Leave Record➛Slack User ID","type":"action","ref":"","reference_display":"Slack User ID","base_type":"string","parent_table_name":"x_832172_integra_work_leaves","column_name":"slack_user_id","choices":null,"attributes":{}},{"name":"{{action.leave_record.rejection_comment}}","label":"action➛Leave Record➛Rejection Comment","type":"action","ref":"","reference_display":"Rejection Comment","base_type":"string","parent_table_name":"x_832172_integra_work_leaves","column_name":"rejection_comment","choices":null,"attributes":{}},{"name":"{{step[2416b539-450d-4603-bd75-f19ff4cb3955].sn_auth_token}}","label":"step➛Post update to channel➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"password2","isLocal":"true"}}]</label_cache>
         <master>true</master>
         <name>Send Rejection Message</name>
         <natlang/>
@@ -904,7 +904,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>af00a6831b6411101f8ffcc8cc4bcb72</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -912,7 +912,7 @@
         <sys_scope display_value="Slack Replica Spoke">3862d6431b2411101f8ffcc8cc4bcbb4</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:46:40</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:02:03</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -965,10 +965,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:46:41</sys_created_on>
         <sys_id>2300a6831b6411101f8ffcc8cc4bcb7e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Slack Replica Spoke">3862d6431b2411101f8ffcc8cc4bcbb4</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:47:36</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:02:04</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2300a6831b6411101f8ffcc8cc4bcb7e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1157,9 +1157,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:46:41</sys_created_on>
         <sys_id>eb00a6831b6411101f8ffcc8cc4bcb8e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:47:36</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:02:04</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value>{
    "blocks": [
@@ -1181,7 +1181,7 @@
              "type": "section",
              "text": {
                  "type": "mrkdwn",
-                 "text": "Reason: "
+                 "text": "*Reason*: {{action.leave_record.rejection_comment}}"
              }
         },
     ]
