@@ -16,7 +16,7 @@
         <internal_name>post_message</internal_name>
         <label_cache>[{"name":"{{action.leave_record}}","label":"action➛Leave Record","type":"action","ref":"","reference_display":"Work Leaves","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_type.description}}","label":"action➛Leave Record➛Leave Type➛Description","type":"action","ref":"","reference_display":"Description","base_type":"string","parent_table_name":"x_832172_integra_leave_types","column_name":"description","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_date}}","label":"action➛Leave Record➛Leave Date","type":"action","ref":"","reference_display":"Leave Date","base_type":"glide_date","parent_table_name":"x_832172_integra_work_leaves","column_name":"leave_date","choices":null,"attributes":{}},{"name":"{{action.leave_record.slack_user_id}}","label":"action➛Leave Record➛Slack User ID","type":"action","ref":"","reference_display":"Slack User ID","base_type":"string","parent_table_name":"x_832172_integra_work_leaves","column_name":"slack_user_id","choices":null,"attributes":{}},{"name":"{{step[2416b539-450d-4603-bd75-f19ff4cb3955].sn_auth_token}}","label":"step➛Post update to channel➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"password2","isLocal":"true"}}]</label_cache>
         <master_snapshot>03b8d24b1b2411101f8ffcc8cc4bcbd6</master_snapshot>
-        <name>Post Message</name>
+        <name>Send Approval Message</name>
         <natlang/>
         <outputs/>
         <state>published</state>
@@ -26,15 +26,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7ea2de831b2411101f8ffcc8cc4bcbef</sys_id>
-        <sys_mod_count>12</sys_mod_count>
-        <sys_name>Post Message</sys_name>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>Send Approval Message</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slack Replica Spoke" source="x_832172_slack_rep">3862d6431b2411101f8ffcc8cc4bcbb4</sys_package>
         <sys_policy/>
         <sys_scope display_value="Slack Replica Spoke">3862d6431b2411101f8ffcc8cc4bcbb4</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_7ea2de831b2411101f8ffcc8cc4bcbef</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:14:43</sys_updated_on>
+        <sys_updated_on>2022-07-12 07:34:55</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -71,7 +71,7 @@
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_7ea2de831b2411101f8ffcc8cc4bcbef^id=7ea2de831b2411101f8ffcc8cc4bcbef"/>
     <sys_hub_step_instance action="delete_multiple" query="action=7ea2de831b2411101f8ffcc8cc4bcbef^sys_idNOT IN6f649e071b2411101f8ffcc8cc4bcbcb"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Post Message">7ea2de831b2411101f8ffcc8cc4bcbef</action>
+        <action display_value="Send Approval Message">7ea2de831b2411101f8ffcc8cc4bcbef</action>
         <cid>2416b539-450d-4603-bd75-f19ff4cb3955</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -87,10 +87,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 06:55:53</sys_created_on>
         <sys_id>6f649e071b2411101f8ffcc8cc4bcbcb</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Slack Replica Spoke">3862d6431b2411101f8ffcc8cc4bcbb4</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:14:34</sys_updated_on>
+        <sys_updated_on>2022-07-12 07:34:14</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6f649e071b2411101f8ffcc8cc4bcbcb"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -293,9 +293,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:10:31</sys_created_on>
         <sys_id>42c7dec71b2411101f8ffcc8cc4bcbe2</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:14:34</sys_updated_on>
+        <sys_updated_on>2022-07-12 07:34:14</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value>{
    "blocks": [
@@ -303,7 +303,7 @@
 	    "type": "section",
 	    "text": {
 		"type": "mrkdwn",
-		"text": "Approved: {{action.leave_record.leave_type.description}} Request Approval on {{action.leave_record.leave_date}} by @{{action.leave_record.slack_user_id}}"
+		"text": "Approved: {{action.leave_record.leave_type.description}} Request Approval on {{action.leave_record.leave_date}} by @&lt;{{action.leave_record.slack_user_id}}&gt;"
 	    }
 	},
         {
@@ -585,7 +585,7 @@
         <label>Leave Record</label>
         <mandatory>true</mandatory>
         <max_length>32</max_length>
-        <model display_value="Post Message">7ea2de831b2411101f8ffcc8cc4bcbef</model>
+        <model display_value="Send Approval Message">7ea2de831b2411101f8ffcc8cc4bcbef</model>
         <model_id>7ea2de831b2411101f8ffcc8cc4bcbef</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_7ea2de831b2411101f8ffcc8cc4bcbef</name>
@@ -670,7 +670,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Post Message">7ea2de831b2411101f8ffcc8cc4bcbef</model>
+        <model display_value="Send Approval Message">7ea2de831b2411101f8ffcc8cc4bcbef</model>
         <model_id>7ea2de831b2411101f8ffcc8cc4bcbef</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_7ea2de831b2411101f8ffcc8cc4bcbef</name>
@@ -755,7 +755,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Post Message">7ea2de831b2411101f8ffcc8cc4bcbef</model>
+        <model display_value="Send Approval Message">7ea2de831b2411101f8ffcc8cc4bcbef</model>
         <model_id>7ea2de831b2411101f8ffcc8cc4bcbef</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_7ea2de831b2411101f8ffcc8cc4bcbef</name>
@@ -802,7 +802,7 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=7ea2de831b2411101f8ffcc8cc4bcbef"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=7ea2de831b2411101f8ffcc8cc4bcbef^sys_idNOT INff64de071b2411101f8ffcc8cc4bcb08"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Post Message">7ea2de831b2411101f8ffcc8cc4bcbef</action_type_id>
+        <action_type_id display_value="Send Approval Message">7ea2de831b2411101f8ffcc8cc4bcbef</action_type_id>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 06:55:54</sys_created_on>
         <sys_id>ff64de071b2411101f8ffcc8cc4bcb08</sys_id>
@@ -886,19 +886,19 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_7ea2de831b2411101f8ffcc8cc4bcbef"/>
     <sys_hub_action_plan action="delete_multiple" query="action_id=7ea2de831b2411101f8ffcc8cc4bcbef^sys_idNOT IN73b8164b1b2411101f8ffcc8cc4bcbc4"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="Post Message">7ea2de831b2411101f8ffcc8cc4bcbef</action_id>
+        <action_id display_value="Send Approval Message">7ea2de831b2411101f8ffcc8cc4bcbef</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"73b8164b1b2411101f8ffcc8cc4bcbc4","name":"plan","plan_signature":null}}</plan>
-        <snapshot>93b8164b1b2411101f8ffcc8cc4bcb1a</snapshot>
+        <snapshot>4f5d9e8f1b2411101f8ffcc8cc4bcbb4</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:14:45</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>73b8164b1b2411101f8ffcc8cc4bcbc4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:14:45</sys_updated_on>
+        <sys_updated_on>2022-07-12 07:34:56</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -914,17 +914,17 @@
         <internal_name>post_message</internal_name>
         <label_cache>[{"name":"{{action.leave_record}}","label":"action➛Leave Record","type":"action","ref":"","reference_display":"Work Leaves","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_type.description}}","label":"action➛Leave Record➛Leave Type➛Description","type":"action","ref":"","reference_display":"Description","base_type":"string","parent_table_name":"x_832172_integra_leave_types","column_name":"description","choices":null,"attributes":{}},{"name":"{{action.leave_record.leave_date}}","label":"action➛Leave Record➛Leave Date","type":"action","ref":"","reference_display":"Leave Date","base_type":"glide_date","parent_table_name":"x_832172_integra_work_leaves","column_name":"leave_date","choices":null,"attributes":{}},{"name":"{{action.leave_record.slack_user_id}}","label":"action➛Leave Record➛Slack User ID","type":"action","ref":"","reference_display":"Slack User ID","base_type":"string","parent_table_name":"x_832172_integra_work_leaves","column_name":"slack_user_id","choices":null,"attributes":{}},{"name":"{{step[2416b539-450d-4603-bd75-f19ff4cb3955].sn_auth_token}}","label":"step➛Post update to channel➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"password2","isLocal":"true"}}]</label_cache>
         <master>true</master>
-        <name>Post Message</name>
+        <name>Send Approval Message</name>
         <natlang/>
         <outputs/>
-        <parent_action display_value="Post Message">7ea2de831b2411101f8ffcc8cc4bcbef</parent_action>
+        <parent_action display_value="Send Approval Message">7ea2de831b2411101f8ffcc8cc4bcbef</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:14:42</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>03b8d24b1b2411101f8ffcc8cc4bcbd6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -932,7 +932,7 @@
         <sys_scope display_value="Slack Replica Spoke">3862d6431b2411101f8ffcc8cc4bcbb4</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:14:42</sys_updated_on>
+        <sys_updated_on>2022-07-12 07:34:54</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -969,7 +969,7 @@
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_03b8d24b1b2411101f8ffcc8cc4bcbd6^id=03b8d24b1b2411101f8ffcc8cc4bcbd6"/>
     <sys_hub_step_instance action="delete_multiple" query="action=03b8d24b1b2411101f8ffcc8cc4bcbd6^sys_idNOT IN8fb8d24b1b2411101f8ffcc8cc4bcbe1"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Post Message">03b8d24b1b2411101f8ffcc8cc4bcbd6</action>
+        <action display_value="Send Approval Message">03b8d24b1b2411101f8ffcc8cc4bcbd6</action>
         <cid>2416b539-450d-4603-bd75-f19ff4cb3955</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -985,10 +985,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:14:42</sys_created_on>
         <sys_id>8fb8d24b1b2411101f8ffcc8cc4bcbe1</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Slack Replica Spoke">3862d6431b2411101f8ffcc8cc4bcbb4</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:14:42</sys_updated_on>
+        <sys_updated_on>2022-07-12 07:34:54</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8fb8d24b1b2411101f8ffcc8cc4bcbe1"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1177,9 +1177,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:14:42</sys_created_on>
         <sys_id>5fb8d24b1b2411101f8ffcc8cc4bcbff</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 07:14:42</sys_updated_on>
+        <sys_updated_on>2022-07-12 07:34:54</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value>{
    "blocks": [
@@ -1187,7 +1187,7 @@
 	    "type": "section",
 	    "text": {
 		"type": "mrkdwn",
-		"text": "Approved: {{action.leave_record.leave_type.description}} Request Approval on {{action.leave_record.leave_date}} by @{{action.leave_record.slack_user_id}}"
+		"text": "Approved: {{action.leave_record.leave_type.description}} Request Approval on {{action.leave_record.leave_date}} by @&lt;{{action.leave_record.slack_user_id}}&gt;"
 	    }
 	},
         {
@@ -1469,7 +1469,7 @@
         <label>Leave Record</label>
         <mandatory>true</mandatory>
         <max_length>32</max_length>
-        <model display_value="Post Message">03b8d24b1b2411101f8ffcc8cc4bcbd6</model>
+        <model display_value="Send Approval Message">03b8d24b1b2411101f8ffcc8cc4bcbd6</model>
         <model_id>03b8d24b1b2411101f8ffcc8cc4bcbd6</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_03b8d24b1b2411101f8ffcc8cc4bcbd6</name>
@@ -1554,7 +1554,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Post Message">03b8d24b1b2411101f8ffcc8cc4bcbd6</model>
+        <model display_value="Send Approval Message">03b8d24b1b2411101f8ffcc8cc4bcbd6</model>
         <model_id>03b8d24b1b2411101f8ffcc8cc4bcbd6</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_03b8d24b1b2411101f8ffcc8cc4bcbd6</name>
@@ -1639,7 +1639,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Post Message">03b8d24b1b2411101f8ffcc8cc4bcbd6</model>
+        <model display_value="Send Approval Message">03b8d24b1b2411101f8ffcc8cc4bcbd6</model>
         <model_id>03b8d24b1b2411101f8ffcc8cc4bcbd6</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_03b8d24b1b2411101f8ffcc8cc4bcbd6</name>
@@ -1686,7 +1686,7 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=03b8d24b1b2411101f8ffcc8cc4bcbd6"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=03b8d24b1b2411101f8ffcc8cc4bcbd6^sys_idNOT IN9bb8164b1b2411101f8ffcc8cc4bcb19"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Post Message">03b8d24b1b2411101f8ffcc8cc4bcbd6</action_type_id>
+        <action_type_id display_value="Send Approval Message">03b8d24b1b2411101f8ffcc8cc4bcbd6</action_type_id>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:14:43</sys_created_on>
         <sys_id>9bb8164b1b2411101f8ffcc8cc4bcb19</sys_id>
