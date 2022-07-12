@@ -26,7 +26,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d17f52431b6411101f8ffcc8cc4bcba0</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Send Rejection Message</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slack Replica Spoke" source="x_832172_slack_rep">3862d6431b2411101f8ffcc8cc4bcbb4</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="Slack Replica Spoke">3862d6431b2411101f8ffcc8cc4bcbb4</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_d17f52431b6411101f8ffcc8cc4bcba0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 08:02:04</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:20:07</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -87,10 +87,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:46:31</sys_created_on>
         <sys_id>c50026831b6411101f8ffcc8cc4bcbce</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Slack Replica Spoke">3862d6431b2411101f8ffcc8cc4bcbb4</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 08:01:55</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:19:59</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c50026831b6411101f8ffcc8cc4bcbce"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -279,9 +279,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:46:31</sys_created_on>
         <sys_id>990066831b6411101f8ffcc8cc4bcb19</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 08:01:55</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:19:59</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value>{
    "blocks": [
@@ -289,7 +289,7 @@
 	    "type": "section",
 	    "text": {
 		"type": "mrkdwn",
-		"text": "*Rejected*: {{action.leave_record.leave_type.description}} Request Approval on {{action.leave_record.leave_date}} by &lt;@{{action.leave_record.slack_user_id}}&gt;"
+		"text": "*Rejected*: {{action.leave_record.leave_type.description}} Request Approval on *{{action.leave_record.leave_date}}* by &lt;@{{action.leave_record.slack_user_id}}&gt;"
 	    }
 	},
         {
@@ -868,17 +868,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Send Rejection Message">d17f52431b6411101f8ffcc8cc4bcba0</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"dc10e6831b6411101f8ffcc8cc4bcb44","name":"plan","plan_signature":null}}</plan>
-        <snapshot>0993ae871b6411101f8ffcc8cc4bcb60</snapshot>
+        <snapshot>95b7220f1b6411101f8ffcc8cc4bcb91</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:46:43</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>dc10e6831b6411101f8ffcc8cc4bcb44</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 08:02:06</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:20:09</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -965,10 +965,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:46:41</sys_created_on>
         <sys_id>2300a6831b6411101f8ffcc8cc4bcb7e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Slack Replica Spoke">3862d6431b2411101f8ffcc8cc4bcbb4</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 08:02:04</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:20:06</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2300a6831b6411101f8ffcc8cc4bcb7e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1157,9 +1157,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-12 07:46:41</sys_created_on>
         <sys_id>eb00a6831b6411101f8ffcc8cc4bcb8e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-12 08:02:04</sys_updated_on>
+        <sys_updated_on>2022-07-12 08:20:06</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value>{
    "blocks": [
@@ -1167,7 +1167,7 @@
 	    "type": "section",
 	    "text": {
 		"type": "mrkdwn",
-		"text": "*Rejected*: {{action.leave_record.leave_type.description}} Request Approval on {{action.leave_record.leave_date}} by &lt;@{{action.leave_record.slack_user_id}}&gt;"
+		"text": "*Rejected*: {{action.leave_record.leave_type.description}} Request Approval on *{{action.leave_record.leave_date}}* by &lt;@{{action.leave_record.slack_user_id}}&gt;"
 	    }
 	},
         {
